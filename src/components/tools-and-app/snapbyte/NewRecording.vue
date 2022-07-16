@@ -82,7 +82,7 @@ export default {
     },
     methods: {
         record() {
-            this.$router.push({
+            this.$router.replace({
                 name: 'LivePreview', 
                 params: {
                     project: this.project, 
