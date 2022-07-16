@@ -85,6 +85,7 @@ export default {
             this.$router.replace({
                 name: 'LivePreview', 
                 params: {
+                    type: 'snapbyte',
                     project: this.project, 
                     recordScreen: this.recordScreen,
                     recordCamera: this.recordCamera,

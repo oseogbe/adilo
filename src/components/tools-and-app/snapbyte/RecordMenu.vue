@@ -18,7 +18,7 @@
                     <img src="@icons/camera-video.svg" alt="camera-video">
                     New Request
                 </button>
-                <button class="btn btn-red">
+                <button class="btn btn-red" @click="record">
                     <img src="@icons/record-circle.svg" alt="record-circle">
                     Start Recording
                 </button>
@@ -47,6 +47,11 @@ export default {
                 'Snapbyte',
                 'My Recordings'
             ]
+        }
+    },
+    methods: {
+        record() {
+            this.$router.push({ path: '/live-preview', query: { type: 'snapbyte' }})
         }
     }
 }

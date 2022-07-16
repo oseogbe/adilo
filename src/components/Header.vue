@@ -25,14 +25,13 @@
             <!-- Center elements -->
             <ul class="navbar-nav flex-row d-none d-md-flex">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        Projects
-                    </a>
+                    <router-link to="/projects" class="nav-link" active-link="active">Projects</router-link>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Tools & App
                     </a>
+                    <!-- <router-link class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" active-link="active">Tools & App</router-link> -->
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li>
                             <router-link :to="{name: 'Snapbyte'}" class="dropdown-item">Snapbyte Recorder</router-link>
@@ -121,10 +120,10 @@ export default {
         font-weight: 500;
     }
 
-    nav .nav-item .nav-link, 
-    nav .nav-item .active {
+    nav .nav-item .nav-link {
         &:hover, 
-        &:focus {
+        &:focus,
+        &.active {
             color: #21455E !important;
             font-weight: 600;
         }
