@@ -6,7 +6,16 @@ const routes = [
     {
         path: "/",
         name: "Home",
-        component: Home
+        component: Home,
+        meta: {
+            title: 'Adilo',
+            metaTags: [
+              {
+                name: 'description',
+                content: 'The home page of the Adilo App.'
+              }
+            ]
+        }
     },
     {
         path: "/projects",
