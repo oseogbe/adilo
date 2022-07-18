@@ -2,7 +2,7 @@
     <div class="content">
         <div v-if="!recordings.length">
             <div class="first-record">
-                <img src="@images/file-saver.jpg" alt="file-saver">
+                <img src="/images/file-saver.jpg" alt="file-saver">
                 <h3>Say hello to the world!</h3>
                 <p>Record your first video/audio and share it what your team, friends, <br>followers and customers.</p>
                 <div>
@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="download">
-                <img src="@images/adilo-preview.jpg" alt="adilo-preview">
+                <img src="/images/adilo-preview.jpg" alt="adilo-preview">
                 <div>
                     <h3>Want more controls & better quality recording?</h3>
                     <button class="btn btn-blue mt-3">

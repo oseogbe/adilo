@@ -24,7 +24,7 @@ export default {
         return {
             recordings: [
                 {
-                    'thumbnail': './src/assets/images/cps2X8JYmS8-unsplash.jpg',
+                    'thumbnail': '/images/thumbnail-1.jpg',
                     'name': 'Getting it right the first time',
                     'description': 'The video description for getting it right the first time.',
                     'views': 588,
@@ -33,7 +33,7 @@ export default {
                     'last_modified': '3 months ago',
                 },
                 {
-                    'thumbnail': './src/assets/images/zan-0WzeC6JtbHU-unsplash.jpg',
+                    'thumbnail': '/images/thumbnail-2.jpg',
                     'name': 'Getting it right the second time',
                     'description': 'The video description for getting it right the second time.',
                     'views': 324,

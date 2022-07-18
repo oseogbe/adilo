@@ -64,7 +64,7 @@
                 <div class="help">Help</div>
 
                 <div class="profile">
-                    <img src="@images/profile-pic.jpg" alt="profile-pic">
+                    <img src="/images/profile-pic.jpg" alt="profile-pic">
                     <div>
                         <h3>Cody Fisher</h3>
                         <p>codyfisher@gmail.com</p>
