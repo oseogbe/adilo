@@ -57,10 +57,7 @@
                                 src="@icons/three-dots.svg" 
                                 class="three-dots" 
                                 alt="three-dots" 
-                                @click="showModal = true"
                             >
-                            <!-- Modal -->
-                            <NewRecording v-show="showModal" @close="showModal = false" />
                         </td>
                     </tr>
                 </tbody>
@@ -70,21 +67,11 @@
 </template>
 
 <script>
-import NewRecording from './NewRecording.vue';
-
 export default {
-    components: {
-        NewRecording
-    },
     props: {
         recordings: {
             type: Object,
             required: true
-        }
-    },
-    data() {
-        return {
-            showModal: false
         }
     },
 }

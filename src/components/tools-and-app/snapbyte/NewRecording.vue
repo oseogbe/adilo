@@ -47,12 +47,10 @@
 
 <script>
 import Toggle from '@vueform/toggle'
-import LivePreview from './LivePreview.vue'
 
 export default {
     components: {
-        Toggle,
-        LivePreview
+        Toggle
     },
     props: {
         open: {
@@ -67,7 +65,7 @@ export default {
                     name: "Build Spotify clone with Vue.js"
                 },
                 {
-                    name: "Learn Inertia.js with Laravel 9 & Vue 3"
+                    name: "Learn Inertia.js with Laravel 9"
                 },
                 {
                     name: "How to make a parallax webpage"
@@ -82,7 +80,7 @@ export default {
     },
     methods: {
         record() {
-            this.$router.replace({
+            this.$router.push({
                 name: 'LivePreview', 
                 params: {
                     type: 'snapbyte',
@@ -135,6 +133,10 @@ export default {
                     background: none;
                     font-size: 40px;
                 }
+            }
+
+            hr {
+                margin-top: 0;
             }
         }
 

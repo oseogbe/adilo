@@ -64,7 +64,7 @@
                 <div class="help">Help</div>
 
                 <div class="profile">
-                    <img src="/images/profile-pic.jpg" alt="profile-pic">
+                    <img src="/images/profile-pic.png" alt="profile-pic">
                     <div>
                         <h3>Cody Fisher</h3>
                         <p>codyfisher@gmail.com</p>
@@ -157,10 +157,12 @@ export default {
     nav .profile {
         display: flex;
         padding-left: 1rem;
-        border-left: 2px solid #707070;
+        border-left: 2px solid #E2E5ED;
 
         img {
-            margin-right: 5px;
+            margin-right: 8px;
+            height: 45px;
+            border-radius: 8px;
         }
 
         h3 {

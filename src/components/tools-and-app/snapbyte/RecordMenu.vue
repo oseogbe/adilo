@@ -18,18 +18,21 @@
                     <img src="@icons/camera-video.svg" alt="camera-video">
                     New Request
                 </button>
-                <button class="btn btn-red" @click="record">
+                <button class="btn btn-red" @click="showModal = true">
                     <img src="@icons/record-circle.svg" alt="record-circle">
                     Start Recording
                 </button>
             </div>
         </div>
         
+        <!-- Modal -->
+        <NewRecording v-show="showModal" @close="showModal = false" />
     </div>
 </template>
 
 <script>
 import Breadcrumb from "../../Breadcrumb.vue";
+import NewRecording from './NewRecording.vue';
 
 export default {
     props: {
@@ -39,19 +42,29 @@ export default {
         }
     },
     components: {
-        Breadcrumb
+        Breadcrumb,
+        NewRecording
     },
     data() {
         return {
             'links': [
                 'Snapbyte',
                 'My Recordings'
-            ]
+            ],
+            showModal: false
         }
     },
     methods: {
         record() {
-            this.$router.push({ path: '/live-preview', query: { type: 'snapbyte' }})
+            this.$router.push({ 
+                path: '/live-preview', 
+                params: { 
+                    type: 'snapbyte',
+                    recordScreen: true,
+                    recordCamera: true,
+                    recordMic: true, 
+                }
+            })
         }
     }
 }
