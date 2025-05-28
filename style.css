@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .hero-section {
+    background: linear-gradient(to right, #e0f2fe, #ffffff);
+    padding: 100px 0;
+  }
+
+  .without-limits {
+    color: #4f46e5;
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+  }
+
+  .without-limits::after {
+    content: '';
+    background-image: url('/assets/stylish-underline.png'); /* Path to your underline image */
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 27px;
+  }
+}
+
