@@ -23,7 +23,7 @@ body {
 
   .without-limits::after {
     content: '';
-    background-image: url('/assets/stylish-underline.png'); /* Path to your underline image */
+    background-image: url('/assets/stylish-underline.png');
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
@@ -31,6 +31,64 @@ body {
     left: 0;
     width: 100%;
     height: 27px;
+  }
+
+  .the-most {
+    background: linear-gradient(to right, #8160F1, #FF543E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+    width: fit-content;
+  }
+
+  .tab-button {
+    background-color: #F9F9F9;
+    color: #000000;
+    transition: all 0.3s ease;
+  }
+
+  .tab-button.active {
+    background: linear-gradient(to right, #8160F1, #FF543E);
+    color: #ffffff;
+  }
+
+  .tab-button:not(.active):hover {
+    border-color: #a1a1aa;
+  }
+
+  .video-hosting-text {
+    display: block;
+    position: relative;
+  }
+
+  .video-hosting-text::after {
+    content: '';
+    background-image: url('/assets/stylish-underline.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: -18px;
+    right: 0;
+    width: 85%;
+    height: 20px;
+  }
+
+  .powerful-text {
+    position: relative;
+  }
+
+  .powerful-text::after {
+    content: '';
+    background-image: url('/assets/stylish-underline.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: -18px;
+    right: 0;
+    width: 110%;
+    height: 20px;
   }
 }
 
