@@ -18,7 +18,7 @@ body {
     color: #4f46e5;
     position: relative;
     display: inline-block;
-    font-weight: 600;
+    font-weight: 800;
   }
 
   .without-limits::after {
@@ -34,12 +34,12 @@ body {
   }
 
   .the-most {
-    background: linear-gradient(to right, #8160F1, #FF543E);
+    background: linear-gradient(to right, #2358DE, #FF55E0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-    font-weight: 600;
+    font-weight: 800;
     width: fit-content;
   }
 
@@ -89,6 +89,15 @@ body {
     right: 0;
     width: 110%;
     height: 20px;
+  }
+
+  .viewers-hooked-gradient-text {
+    background: linear-gradient(to right, #FF4907, #B31FCA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: 800;
   }
 }
 
