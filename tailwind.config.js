@@ -16,6 +16,9 @@ export default {
       colors: {
         "primary-blue":"#2358DE"
       },
+      boxShadow: {
+        "btn": "0px 13px 40.5px 0px rgba(39, 48, 146, 0.35)"
+      }
     },
   },
   plugins: [],
