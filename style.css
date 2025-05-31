@@ -2,10 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: 'Inter', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h2 {
+    @apply text-[46px] font-semibold leading-[54px];
+  }
+
+  h3 {
+    @apply text-[32px] font-semibold leading-[40px] tracking-tight;
+  }
+
+  h5 {
+    @apply text-[22px] font-semibold;
+  }
 }
 
 @layer components {
@@ -14,6 +28,39 @@ body {
     padding: 100px 0;
   }
 
+  .tab-button {
+    background-color: #F9F9F9;
+    color: #000000;
+    transition: all 0.3s ease;
+  }
+
+  .tab-button.active {
+    background: linear-gradient(to right, #8160F1, #FF543E);
+    color: #ffffff;
+  }
+
+  .tab-button:not(.active):hover {
+    border-color: #a1a1aa;
+  }
+
+  .feature-slider {
+    @apply flex overflow-x-auto scroll-smooth pb-4;
+  }
+
+  .feature-card {
+    @apply min-w-[200px] flex-none bg-white rounded-xl p-4 text-center font-medium whitespace-nowrap;
+  }
+
+  .testimonial-card {
+    @apply bg-white p-8 rounded-[15px] shadow-lg text-left;
+  }
+
+  .primary-btn {
+    @apply bg-primary-blue text-white px-8 py-4 rounded-md font-medium inline-flex items-center shadow-btn;
+  }
+}
+
+@layer utilities {
   .without-limits {
     color: #4f46e5;
     position: relative;
@@ -34,28 +81,13 @@ body {
   }
 
   .the-most {
-    background: linear-gradient(to right, #2358DE, #FF55E0);
+    background: linear-gradient(96deg, #2358DE 20.88%, #FF55E0 82.08%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
     font-weight: 800;
     width: fit-content;
-  }
-
-  .tab-button {
-    background-color: #F9F9F9;
-    color: #000000;
-    transition: all 0.3s ease;
-  }
-
-  .tab-button.active {
-    background: linear-gradient(to right, #8160F1, #FF543E);
-    color: #ffffff;
-  }
-
-  .tab-button:not(.active):hover {
-    border-color: #a1a1aa;
   }
 
   .video-hosting-text {
@@ -92,7 +124,7 @@ body {
   }
 
   .viewers-hooked-gradient-text {
-    background: linear-gradient(to right, #FF4907, #B31FCA);
+    background: linear-gradient(96deg, #FF4907 6.85%, #B31FCA 98.96%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -104,15 +136,20 @@ body {
     background: linear-gradient(145deg, rgba(178, 254, 250, 0.10) -4.59%, rgba(14, 210, 247, 0.10) 90.99%);
   }
 
-  .feature-slider {
-    @apply flex overflow-x-auto scroll-smooth pb-4;
+  .testimonial-gradient {
+    opacity: 0.3;
+    background: linear-gradient(90deg, #44FF9A -0.55%, #44B0FF 22.86%, #8B44FF 48.36%, #F64 73.33%, #EBFF70 99.34%);
+    width: 50%;
+    margin: auto;
   }
 
-  .feature-card {
-    @apply min-w-[200px] flex-none bg-white rounded-xl p-4 text-center font-medium whitespace-nowrap;
-  }
-
-  .primary-btn {
-    @apply bg-primary-blue text-white px-8 py-4 rounded-md font-medium inline-flex items-center shadow-btn;
+  .podcasting-reimagined-gradient-text {
+    background: linear-gradient(93deg, #FD5 -3.75%, #FF0342 101.66%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: 800;
+    
   }
 }
