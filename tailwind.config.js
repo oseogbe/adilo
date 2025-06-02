@@ -7,7 +7,11 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "55px",
+      padding: {
+        DEFAULT: '1rem',
+        md: '2rem',
+        xl: '3.4rem',
+      },
     },
     extend: {
       fontFamily: {

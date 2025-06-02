@@ -17,9 +17,11 @@
   <header class="bg-white">
     <div class="container mx-auto flex justify-between items-center py-6">
       <div>
-        <img src="/assets/logo.png" alt="Adilo logo" />
+        <img src="/assets/logo.png" class="w-28 lg:w-full" alt="Adilo logo" />
       </div>
-      <div class="flex items-center gap-x-8">
+
+      <!-- Desktop Menu -->
+      <div class="hidden lg:flex items-center gap-x-8">
         <a href="#" class="font-medium inline-flex items-center">Products
           <img src="/assets/arrow-down.svg" class="inline-flex w-4 ml-1" alt="" /></a>
         <a href="#" class="font-medium inline-flex items-center">Solutions
@@ -28,7 +30,9 @@
         <a href="#" class="font-medium inline-flex items-center">Resources
           <img src="/assets/arrow-down.svg" class="inline-flex w-4 ml-1" alt="" /></a>
       </div>
-      <div class="flex items-center gap-x-4">
+
+      <!-- Desktop Auth Buttons -->
+      <div class="hidden lg:flex items-center gap-x-4">
         <div>
           <a href="#" class="font-medium">Login</a>
         </div>
@@ -39,6 +43,39 @@
           </a>
         </div>
       </div>
+
+      <!-- Mobile Menu -->
+      <label class="lg:hidden relative z-40 cursor-pointer pr-3" for="mobile-menu">
+        <input class="peer hidden" type="checkbox" id="mobile-menu" />
+        <div
+          class="relative z-50 block h-[2px] w-5 bg-black bg-transparent content-[''] before:absolute before:top-[-0.35rem] before:z-50 before:block before:h-full before:w-full before:bg-black before:transition-all before:duration-200 before:ease-out before:content-[''] after:absolute after:right-0 after:bottom-[-0.35rem] after:block after:h-full after:w-full after:bg-black after:transition-all after:duration-200 after:ease-out after:content-[''] peer-checked:bg-transparent before:peer-checked:top-0 before:peer-checked:w-full before:peer-checked:rotate-45 before:peer-checked:transform after:peer-checked:bottom-0 after:peer-checked:w-full after:peer-checked:-rotate-45 after:peer-checked:transform">
+        </div>
+        <div class="fixed inset-0 z-40 hidden h-full w-full bg-black/50 backdrop-blur-sm peer-checked:block">
+          &nbsp;
+        </div>
+        <div
+          class="fixed top-0 left-0 z-40 h-full w-full -translate-x-full overflow-y-auto overscroll-y-none transition duration-500 peer-checked:translate-x-0">
+          <div class="float-left h-dvh w-screen bg-white text-gray-900 px-4 py-8 shadow-2xl">
+            <div class="mb-8">
+              <img src="/assets/logo.png" class="w-28" alt="Adilo logo" />
+            </div>
+            <nav class="space-y-4">
+              <a href="#" class="block font-medium py-2">Products</a>
+              <a href="#" class="block font-medium py-2">Solutions</a>
+              <a href="#" class="block font-medium py-2">Pricing</a>
+              <a href="#" class="block font-medium py-2">Resources</a>
+              <div class="pt-4 border-t">
+                <a href="#" class="block font-medium py-2">Login</a>
+                <a href="#"
+                  class="block bg-primary-blue text-white px-4 py-3 rounded-lg font-medium mt-2 text-center w-full">
+                  <span class="mr-1">Sign Up Free</span>
+                  <img src="/assets/arrow-right-up.svg" class="inline-flex w-[11px]" alt="" />
+                </a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </label>
     </div>
   </header>
 
@@ -65,7 +102,7 @@
           <img src="/assets/hero/trusted-by.png" alt="Trusted by 60,000+ businesses & creators" class="mr-4" />
         </div>
         <div class="mt-[30px]">
-           <div class="w-[90%] px-[17px] py-[14px] rounded-[15px] bg-white flex">
+          <div class="w-[90%] px-[17px] py-[14px] rounded-[15px] bg-white flex">
             <div class="w-[25%] mr-4">
               <img src="/assets/hero/john-doe.png" class="w-12" alt="" />
               <div class="mt-2">
@@ -74,9 +111,10 @@
               </div>
             </div>
             <div class="flex-1 bg-[#FAFAFA] text-sm rounded-lg px-[15px] py-[13px]">
-              "This video player exceeded my expectations with its stunning picture quality and seamless performance! A must-have for any media enthusiast—highly recommended!"
+              "This video player exceeded my expectations with its stunning picture quality and seamless performance! A
+              must-have for any media enthusiast—highly recommended!"
             </div>
-           </div>
+          </div>
         </div>
       </div>
       <div class="w-[60%] flex justify-center items-center">
@@ -604,21 +642,28 @@
 
   <section class="pb-24">
     <div class="container mx-auto text-center">
-      <h2>Podcasting, Reimagined <br /><span class="podcasting-reimagined-gradient-text">Audio & Video, One Platform.</span></h2>
+      <h2>Podcasting, Reimagined <br /><span class="podcasting-reimagined-gradient-text">Audio & Video, One
+          Platform.</span></h2>
       <p class="mt-4 2xl:text-lg text-gray-900">
-        Turn your ideas into a global podcast in minutes. Host, record, and distribute unlimited <br/>video and audio podcasts—all from one dashboard.
+        Turn your ideas into a global podcast in minutes. Host, record, and distribute unlimited <br />video and audio
+        podcasts—all from one dashboard.
       </p>
       <div class="mt-10">
         <div class="relative w-[70%] mx-auto">
-          <img src="/assets/podcasting-reimagined/podcast-screen.png" alt="podcasting, reimagined" class="w-full h-auto" />
+          <img src="/assets/podcasting-reimagined/podcast-screen.png" alt="podcasting, reimagined"
+            class="w-full h-auto" />
 
-          <img src="/assets/podcasting-reimagined/left-vector-1023.png" alt="" class="absolute -top-10 -left-36 -z-10 blur-lg" />
-          <img src="/assets/podcasting-reimagined/right-vector-1022.png" alt="" class="absolute -bottom-24 -right-36 -z-10 blur-lg" />
+          <img src="/assets/podcasting-reimagined/left-vector-1023.png" alt=""
+            class="absolute -top-10 -left-36 -z-10 blur-lg" />
+          <img src="/assets/podcasting-reimagined/right-vector-1022.png" alt=""
+            class="absolute -bottom-24 -right-36 -z-10 blur-lg" />
 
           <img src="/assets/podcasting-reimagined/deezer.png" alt="" class="absolute -top-36 -left-56 z-10" />
           <img src="/assets/podcasting-reimagined/image 2512.png" alt="" class="absolute -top-16 -left-6 z-10" />
-          <img src="/assets/podcasting-reimagined/youtube_music_icon.png" alt="" class="absolute top-28 -left-52 z-10" />
-          <img src="/assets/podcasting-reimagined/left-arrow-vector.png" alt="" class="absolute bottom-40 -left-36 z-10" />
+          <img src="/assets/podcasting-reimagined/youtube_music_icon.png" alt=""
+            class="absolute top-28 -left-52 z-10" />
+          <img src="/assets/podcasting-reimagined/left-arrow-vector.png" alt=""
+            class="absolute bottom-40 -left-36 z-10" />
           <img src="/assets/podcasting-reimagined/image-2535.png" alt="" class="absolute bottom-8 -left-52 z-10" />
           <img src="/assets/podcasting-reimagined/spotify.png" alt="" class="absolute -bottom-20 -left-20 z-10" />
           <img src="/assets/podcasting-reimagined/tunein_icon.png" alt="" class="absolute -bottom-12 left-20 z-10" />
@@ -627,7 +672,8 @@
           <img src="/assets/podcasting-reimagined/image-2507.png" alt="" class="absolute -top-32 -right-[84px] z-10" />
           <img src="/assets/podcasting-reimagined/image-2514.png" alt="" class="absolute top-44 -right-52 z-10" />
           <img src="/assets/podcasting-reimagined/image-2506.png" alt="" class="absolute top-60 -right-20 z-10" />
-          <img src="/assets/podcasting-reimagined/right-arrow-vector.png" alt="" class="absolute bottom-44 -right-52 z-10" />
+          <img src="/assets/podcasting-reimagined/right-arrow-vector.png" alt=""
+            class="absolute bottom-44 -right-52 z-10" />
         </div>
       </div>
     </div>

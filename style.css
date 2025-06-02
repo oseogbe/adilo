@@ -25,6 +25,19 @@
     @apply bg-gradient-to-r from-sky-100 to-white py-24;
   }
 
+  /* Mobile Menu Styles */
+  #mobile-menu {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  #mobile-menu.hidden {
+    @apply opacity-0 pointer-events-none;
+  }
+
+  #mobile-menu:not(.hidden) {
+    @apply opacity-100 pointer-events-auto;
+  }
+
   .tab-button {
     @apply bg-[#F9F9F9] text-black transition-all duration-300 ease-in-out;
   }

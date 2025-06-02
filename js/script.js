@@ -1,3 +1,8 @@
+// Initially show the Hosting tab content
+document.getElementById('hosting-content').classList.remove('hidden');
+document.getElementById('hosting-content').classList.add('flex', 'items-start', 'text-left');
+
+// Tab functionality
 const tabButtons = document.querySelectorAll('.tab-button');
 const tabContents = document.querySelectorAll('.tab-content');
 
@@ -20,6 +25,24 @@ tabButtons.forEach(button => {
     });
 });
 
-// Initially show the Hosting tab content
-document.getElementById('hosting-content').classList.remove('hidden');
-document.getElementById('hosting-content').classList.add('flex', 'items-start', 'text-left'); 
+// Mobile menu toggle
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+
+mobileMenuButton.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (event) => {
+  if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+    mobileMenu.classList.add('hidden');
+  }
+});
+
+// Close mobile menu when window is resized to desktop view
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 1024) { // lg breakpoint
+    mobileMenu.classList.add('hidden');
+  }
+}); 
