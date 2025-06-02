@@ -63,7 +63,7 @@
   }
 
   .primary-btn {
-    @apply bg-primary-blue text-white px-8 py-4 rounded-md font-medium inline-flex items-center shadow-btn;
+    @apply bg-primary-blue text-white text-sm sm:text-base px-4 py-3 sm:px-8 sm:py-4 rounded-md font-medium inline-flex items-center shadow-btn;
   }
 }
 
@@ -89,7 +89,7 @@
   }
 
   .video-hosting-text::after {
-    @apply content-[''] bg-[url('/assets/stylish-underline.png')] bg-no-repeat bg-contain absolute -bottom-[18px] right-0 w-[85%] h-5;
+    @apply content-[''] bg-[url('/assets/stylish-underline.png')] bg-no-repeat bg-contain absolute -bottom-3 sm:-bottom-[18px] -right-4 sm:right-0 w-[85%] h-3 sm:h-5;
   }
 
   .powerful-text {
