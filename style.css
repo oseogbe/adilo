@@ -77,7 +77,7 @@
   }
 
   .without-text::after {
-    @apply content-[''] bg-[url('/assets/stylish-underline.png')] bg-no-repeat bg-contain absolute -bottom-[15px] right-0 w-full h-[30px];
+    @apply content-[''] bg-[url('/assets/stylish-underline.png')] bg-no-repeat bg-contain absolute -bottom-6 md:-bottom-[15px] right-0 w-full h-[30px];
   }
 
   .the-most-text {
