@@ -4,9 +4,7 @@
 
 @layer base {
   body {
-    font-family: 'Inter', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    @apply font-['Inter'] antialiased;
   }
 
   h2 {
@@ -24,23 +22,19 @@
 
 @layer components {
   .hero-section {
-    background: linear-gradient(to right, #e0f2fe, #ffffff);
-    padding: 100px 0;
+    @apply bg-gradient-to-r from-sky-100 to-white py-24;
   }
 
   .tab-button {
-    background-color: #F9F9F9;
-    color: #000000;
-    transition: all 0.3s ease;
+    @apply bg-[#F9F9F9] text-black transition-all duration-300 ease-in-out;
   }
 
   .tab-button.active {
-    background: linear-gradient(to right, #8160F1, #FF543E);
-    color: #ffffff;
+    @apply bg-gradient-to-r from-[#8160F1] to-[#FF543E] text-white;
   }
 
   .tab-button:not(.active):hover {
-    border-color: #a1a1aa;
+    @apply border-[#a1a1aa];
   }
 
   .feature-slider {
@@ -61,95 +55,54 @@
 }
 
 @layer utilities {
-  .without-limits {
-    color: #4f46e5;
-    position: relative;
-    display: inline-block;
-    font-weight: 800;
+  .without-limits-text {
+    @apply text-[#4f46e5] font-extrabold;
   }
 
-  .without-limits::after {
-    content: '';
-    background-image: url('/assets/stylish-underline.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    width: 100%;
-    height: 27px;
+  .without-text {
+    @apply relative;
   }
 
-  .the-most {
-    background: linear-gradient(96deg, #2358DE 20.88%, #FF55E0 82.08%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    font-weight: 800;
-    width: fit-content;
+  .without-text::after {
+    @apply content-[''] bg-[url('/assets/stylish-underline.png')] bg-no-repeat bg-contain absolute -bottom-[15px] right-0 w-full h-[30px];
+  }
+
+  .the-most-text {
+    @apply bg-gradient-to-r from-[#2358DE] to-[#FF55E0] bg-clip-text text-transparent font-extrabold w-fit;
   }
 
   .video-hosting-text {
-    display: block;
-    position: relative;
+    @apply block relative;
   }
 
   .video-hosting-text::after {
-    content: '';
-    background-image: url('/assets/stylish-underline.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    bottom: -18px;
-    right: 0;
-    width: 85%;
-    height: 20px;
+    @apply content-[''] bg-[url('/assets/stylish-underline.png')] bg-no-repeat bg-contain absolute -bottom-[18px] right-0 w-[85%] h-5;
   }
 
   .powerful-text {
-    position: relative;
+    @apply relative;
   }
 
   .powerful-text::after {
-    content: '';
-    background-image: url('/assets/stylish-underline.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    bottom: -18px;
-    right: 0;
-    width: 110%;
-    height: 20px;
+    @apply content-[''] bg-[url('/assets/stylish-underline.png')] bg-no-repeat bg-contain absolute -bottom-[18px] right-0 w-[110%] h-5;
   }
 
   .viewers-hooked-gradient-text {
-    background: linear-gradient(96deg, #FF4907 6.85%, #B31FCA 98.96%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    font-weight: 800;
+    @apply bg-gradient-to-r from-[#FF4907] to-[#B31FCA] bg-clip-text text-transparent font-extrabold;
   }
 
   .bg-light-blue-gradient {
-    background: linear-gradient(145deg, rgba(178, 254, 250, 0.10) -4.59%, rgba(14, 210, 247, 0.10) 90.99%);
+    @apply bg-gradient-to-br from-[rgba(178,254,250,0.1)] to-[rgba(14,210,247,0.1)];
   }
 
-  .testimonial-gradient {
-    opacity: 0.3;
+  /* .testimonial-gradient {
     background: linear-gradient(90deg, #44FF9A -0.55%, #44B0FF 22.86%, #8B44FF 48.36%, #F64 73.33%, #EBFF70 99.34%);
+    opacity: 0.3;
     width: 50%;
     margin: auto;
-  }
+  } */
 
   .podcasting-reimagined-gradient-text {
-    background: linear-gradient(93deg, #FD5 -3.75%, #FF0342 101.66%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    font-weight: 800;
-    
+    @apply bg-gradient-to-r from-[#FD5] to-[#FF0342] bg-clip-text text-transparent font-extrabold;
   }
 }
